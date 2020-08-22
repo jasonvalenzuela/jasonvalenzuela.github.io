@@ -1,34 +1,32 @@
-import React from 'react'
-import { Root, Routes, addPrefetchExcludes } from 'react-static'
-import { Link, Router } from '@reach/router'
-import FancyDiv from 'components/FancyDiv'
-import Dynamic from 'containers/Dynamic'
-import './app.css'
-
-// Any routes that start with 'dynamic' will be treated as non-static routes
-addPrefetchExcludes(['dynamic'])
+import React from "react";
+import { Root, Routes } from "react-static";
+import { Router } from "@reach/router";
+import { GlobalStyles } from "./global-styles";
+import styled from "styled-components";
 
 function App() {
   return (
     <Root>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/dynamic">Dynamic</Link>
-      </nav>
-      <div className="content">
-        <FancyDiv>
-          <React.Suspense fallback={<em>Loading...</em>}>
-            <Router>
-              <Dynamic path="dynamic" />
-              <Routes path="*" />
-            </Router>
-          </React.Suspense>
-        </FancyDiv>
-      </div>
+      <GlobalStyles />
+      <Wrapper>
+        <React.Suspense fallback={<em>Loading...</em>}>
+          <Routes>
+            <Router pattern="*" />
+          </Routes>
+        </React.Suspense>
+      </Wrapper>
     </Root>
-  )
+  );
 }
 
-export default App
+export default App;
+
+const Wrapper = styled.div`
+  background: #42a8c0;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+`;
