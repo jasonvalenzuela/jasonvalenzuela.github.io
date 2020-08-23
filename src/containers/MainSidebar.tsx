@@ -2,8 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import ContactSection from "components/ContactSection";
 import ProfileSection from "components/ProfileSection";
-import { ContactContent, ProfileContent, EducationContent } from "types";
+import {
+  ContactContent,
+  ProfileContent,
+  EducationContent,
+  SidebarListContent,
+} from "types";
 import EducationSection from "components/EducationSection";
+import SidebarList from "components/SidebarList";
 
 const profileImage = require("../../assets/images/9-23.png");
 const profileContent: ProfileContent = {
@@ -42,12 +48,24 @@ const educationContent: EducationContent = {
   yearEnd: "2017",
 };
 
+const interestContent: SidebarListContent = {
+  title: "Interests",
+  content: [
+    "Web Development",
+    "Mobile Application Development",
+    "Machine Learning",
+    "Functional Programming",
+    "Data Science",
+  ],
+};
+
 export default () => {
   return (
     <SidebarRoot>
       <ProfileSection {...profileContent} />
       <ContactSection contactContent={contactContent} />
       <EducationSection {...educationContent} />
+      <SidebarList {...interestContent} />
     </SidebarRoot>
   );
 };

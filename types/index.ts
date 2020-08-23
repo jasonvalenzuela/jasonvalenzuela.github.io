@@ -18,3 +18,8 @@ export interface EducationContent {
   yearStart: string;
   yearEnd: string;
 }
+
+export interface SidebarListContent {
+  title: string;
+  content: string[];
+}
