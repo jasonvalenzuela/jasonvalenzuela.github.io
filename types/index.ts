@@ -11,3 +11,10 @@ export interface ProfileContent {
   name: string;
   tagline: string;
 }
+
+export interface EducationContent {
+  degree: string;
+  university: string;
+  yearStart: string;
+  yearEnd: string;
+}

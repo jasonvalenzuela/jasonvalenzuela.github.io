@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import ContactSection from "components/ContactSection";
 import ProfileSection from "components/ProfileSection";
-import { ContactContent, ProfileContent } from "types";
+import { ContactContent, ProfileContent, EducationContent } from "types";
+import EducationSection from "components/EducationSection";
 
 const profileImage = require("../../assets/images/9-23.png");
 const profileContent: ProfileContent = {
@@ -34,11 +35,19 @@ const contactContent: ContactContent[] = [
   },
 ];
 
+const educationContent: EducationContent = {
+  degree: "B.S. Computer Science",
+  university: "University of Virginia",
+  yearStart: "2013",
+  yearEnd: "2017",
+};
+
 export default () => {
   return (
     <SidebarRoot>
       <ProfileSection {...profileContent} />
       <ContactSection contactContent={contactContent} />
+      <EducationSection {...educationContent} />
     </SidebarRoot>
   );
 };

@@ -8,6 +8,7 @@ import {
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { ContactType, ContactContent } from "types";
+import SidebarContainer from "./common/SidebarContainer";
 
 const ContactTypeToIconMap: Record<ContactType, IconDefinition> = {
   email: faEnvelope,
@@ -50,11 +51,7 @@ const ContactRowBase = styled.div`
   align-items: center;
 `;
 
-const ContactRoot = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-
+const ContactRoot = styled(SidebarContainer)`
   ${ContactRowBase} {
     margin-bottom: 15px;
   }
