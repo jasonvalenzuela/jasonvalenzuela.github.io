@@ -1,11 +1,12 @@
 import React, { FC } from "react";
 import styled from "styled-components";
+import { ProfileContent } from "types";
 
-const ProfileSection: FC<{
-  profileImage: string;
-  name: string;
-  tagline: string;
-}> = ({ profileImage, name, tagline }) => (
+const ProfileSection: FC<ProfileContent> = ({
+  profileImage,
+  name,
+  tagline,
+}) => (
   <ProfileRoot>
     <ProfileImage src={profileImage} />
     <ProfileName>{name}</ProfileName>

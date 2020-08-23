@@ -5,3 +5,9 @@ export interface ContactContent {
   text: string;
   href: string;
 }
+
+export interface ProfileContent {
+  profileImage: string;
+  name: string;
+  tagline: string;
+}

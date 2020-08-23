@@ -2,9 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import ContactSection from "components/ContactSection";
 import ProfileSection from "components/ProfileSection";
-import { ContactContent } from "types";
+import { ContactContent, ProfileContent } from "types";
 
 const profileImage = require("../../assets/images/9-23.png");
+
+const profileContent: ProfileContent = {
+  profileImage,
+  name: "Jason Valenzuela",
+  tagline: "Software Developer",
+};
 
 const contactContent: ContactContent[] = [
   {
@@ -32,11 +38,7 @@ const contactContent: ContactContent[] = [
 export default () => {
   return (
     <SidebarRoot>
-      <ProfileSection
-        profileImage={profileImage}
-        name="Jason Valenzuela"
-        tagline="Software Developer"
-      />
+      <ProfileSection {...profileContent} />
       <ContactSection contactContent={contactContent} />
     </SidebarRoot>
   );
