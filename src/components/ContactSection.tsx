@@ -19,7 +19,9 @@ const ContactTypeToIconMap: Record<ContactType, IconDefinition> = {
 const ContactSectionRow: FC<ContactContent> = ({ contactType, text, href }) => (
   <ContactRowBase>
     <FontAwesomeIcon icon={ContactTypeToIconMap[contactType]} />
-    <ContactRowText href={href}>{text}</ContactRowText>
+    <ContactRowLink href={href} target="_blank">
+      {text}
+    </ContactRowLink>
   </ContactRowBase>
 );
 
@@ -35,7 +37,7 @@ const ContactSection: FC<{ contactContent: ContactContent[] }> = ({
 
 export default ContactSection;
 
-const ContactRowText = styled.a`
+const ContactRowLink = styled.a`
   margin-left: 5px;
   font-size: 14px;
   color: #fff;

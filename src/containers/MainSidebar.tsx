@@ -5,7 +5,6 @@ import ProfileSection from "components/ProfileSection";
 import { ContactContent, ProfileContent } from "types";
 
 const profileImage = require("../../assets/images/9-23.png");
-
 const profileContent: ProfileContent = {
   profileImage,
   name: "Jason Valenzuela",
