@@ -24,20 +24,6 @@ export const GlobalStyles = createGlobalStyle`
     h6 {
     font-weight: 700;
     }
-    a {
-    color: #2d7788;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    }
-    a:hover {
-    text-decoration: underline;
-    color: #1a454f;
-    }
-    a:focus {
-    text-decoration: none;
-    }
     p {
     line-height: 1.5;
     }

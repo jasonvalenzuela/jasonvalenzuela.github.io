@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
-import { ContactType } from "types";
+import { ContactType, ContactContent } from "types";
 
 const ContactTypeToIconMap: Record<ContactType, IconDefinition> = {
   email: faEnvelope,
@@ -16,31 +16,30 @@ const ContactTypeToIconMap: Record<ContactType, IconDefinition> = {
   github: faGithub,
 };
 
-const ContactSectionRow: FC<{ contactType: ContactType; text: string }> = ({
-  contactType,
-  text,
-}) => (
+const ContactSectionRow: FC<ContactContent> = ({ contactType, text, href }) => (
   <ContactRowBase>
     <FontAwesomeIcon icon={ContactTypeToIconMap[contactType]} />
-    <ContactRowText>{text}</ContactRowText>
+    <ContactRowText href={href}>{text}</ContactRowText>
   </ContactRowBase>
 );
 
-// TODO: need to add links
-const ContactSection: FC = () => (
+const ContactSection: FC<{ contactContent: ContactContent[] }> = ({
+  contactContent,
+}) => (
   <ContactRoot>
-    <ContactSectionRow contactType="email" text="jev4zs@virginia.edu" />
-    <ContactSectionRow contactType="phone" text="(571) 337-4895" />
-    <ContactSectionRow contactType="linkedin" text="Jason Valenzuela" />
-    <ContactSectionRow contactType="github" text="toyotathon" />
+    {contactContent.map(({ contactType, text, href }) => (
+      <ContactSectionRow contactType={contactType} text={text} href={href} />
+    ))}
   </ContactRoot>
 );
 
 export default ContactSection;
 
-const ContactRowText = styled.div`
+const ContactRowText = styled.a`
   margin-left: 5px;
   font-size: 14px;
+  color: #fff;
+  cursor: pointer;
 `;
 
 const ContactRowBase = styled.div`

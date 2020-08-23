@@ -5,3 +5,9 @@ export interface Post {
   id: number;
   title: string;
 }
+
+export interface ContactContent {
+  contactType: ContactType;
+  text: string;
+  href: string;
+}
