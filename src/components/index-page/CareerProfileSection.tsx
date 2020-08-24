@@ -19,5 +19,5 @@ const CareerProfileSection: FC<CareerProfileSectionProps> = ({
 export default CareerProfileSection;
 
 const SectionText = styled.p`
-  margin-top: 0;
+  margin: 0;
 `;

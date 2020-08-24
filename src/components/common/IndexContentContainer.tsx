@@ -9,7 +9,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-interface MainContainerProps {
+interface IndexContentContainerProps {
+  className?: string;
   title: string;
   sectionType: MainSectionType;
 }
@@ -36,18 +37,19 @@ const MainContainerTitle: FC<{ sectionType: MainSectionType }> = ({
   </TitleBase>
 );
 
-const MainContainer: FC<MainContainerProps> = ({
+const IndexContentContainer: FC<IndexContentContainerProps> = ({
+  className,
   sectionType,
   title,
   children,
 }) => (
-  <ContainerBase>
+  <ContainerBase className={className}>
     <MainContainerTitle sectionType={sectionType}>{title}</MainContainerTitle>
     {children}
   </ContainerBase>
 );
 
-export default MainContainer;
+export default IndexContentContainer;
 
 const IconBase = styled.div`
   background-color: #2d7788;
@@ -75,4 +77,8 @@ const TitleBase = styled.h2`
 const ContainerBase = styled.div`
   display: flex;
   flex-direction: column;
+
+  & > :not(:last-child) {
+    margin-bottom: 10px;
+  }
 `;
