@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import SidebarContainer from "./common/SidebarContainer";
-import SidebarTitle from "./common/SidebarTitle";
+import SidebarContainer from "./SidebarContainer";
+import SidebarTitle from "./SidebarTitle";
 import styled from "styled-components";
 import { SidebarListContent } from "types";
 

@@ -8,7 +8,7 @@ import {
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styled from "styled-components";
 import { ContactType, ContactContent } from "types";
-import SidebarContainer from "./common/SidebarContainer";
+import SidebarContainer from "../common/SidebarContainer";
 
 const ContactTypeToIconMap: Record<ContactType, IconDefinition> = {
   email: faEnvelope,

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import MainSidebar from "containers/MainSidebar";
-import CareerProfileSection from "components/CareerProfileSection";
-import ExperienceSection from "components/ExperienceSection";
-import ProjectsSection from "components/ProjectsSection";
+import CareerProfileSection from "components/index-page/CareerProfileSection";
+import ExperienceSection from "components/index-page/ExperienceSection";
+import ProjectsSection from "components/index-page/ProjectsSection";
 
 const careerProfileContent = [
   "I am full stack software developer and a computer science graduate from the University of Virginia looking for software development roles in the Eugene-Springfield, OR area. I am also open to roles in Corvallis, Portland, or remote. I have a breadth of experience in software development, ranging from web and mobile development to machine learning and data analytics, and I enjoy expanding my knowledge of my craft and delivering pleasurable experiences to clients and stakeholders.",

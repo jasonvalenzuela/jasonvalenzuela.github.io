@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import ContactSection from "components/ContactSection";
-import ProfileSection from "components/ProfileSection";
+import ContactSection from "components/main-sidebar/ContactSection";
+import ProfileSection from "components/main-sidebar/ProfileSection";
 import {
   ContactContent,
   ProfileContent,
   EducationContent,
   SidebarListContent,
 } from "types";
-import EducationSection from "components/EducationSection";
-import SidebarList from "components/SidebarList";
+import EducationSection from "components/main-sidebar/EducationSection";
+import SidebarList from "components/common/SidebarList";
 
 const profileImage = require("../../assets/images/9-23.png");
 const profileContent: ProfileContent = {

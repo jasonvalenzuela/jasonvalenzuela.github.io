@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import MainContainer from "./common/MainContainer";
+import MainContainer from "../common/MainContainer";
 import styled from "styled-components";
 
 interface CareerProfileSectionProps {
