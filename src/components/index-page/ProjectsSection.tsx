@@ -1,8 +1,11 @@
 import React, { FC } from "react";
-import MainContainer from "../common/MainContainer";
+import IndexContentContainer from "../common/IndexContentContainer";
 
 const ProjectsSection: FC = () => (
-  <MainContainer sectionType="projects" title="Projects"></MainContainer>
+  <IndexContentContainer
+    sectionType="projects"
+    title="Projects"
+  ></IndexContentContainer>
 );
 
 export default ProjectsSection;

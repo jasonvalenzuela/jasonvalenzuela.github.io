@@ -30,8 +30,13 @@ const ContactSection: FC<{ contactContent: ContactContent[] }> = ({
   contactContent,
 }) => (
   <ContactRoot>
-    {contactContent.map(({ contactType, text, href }) => (
-      <ContactSectionRow contactType={contactType} text={text} href={href} />
+    {contactContent.map(({ contactType, text, href }, index) => (
+      <ContactSectionRow
+        key={index}
+        contactType={contactType}
+        text={text}
+        href={href}
+      />
     ))}
   </ContactRoot>
 );

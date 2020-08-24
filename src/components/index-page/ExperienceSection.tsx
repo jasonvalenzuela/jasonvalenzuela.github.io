@@ -1,8 +1,11 @@
 import React, { FC } from "react";
-import MainContainer from "../common/MainContainer";
+import IndexContentContainer from "../common/IndexContentContainer";
 
 const ExperienceSection: FC = () => (
-  <MainContainer sectionType="experience" title="Experience"></MainContainer>
+  <IndexContentContainer
+    sectionType="experience"
+    title="Experience"
+  ></IndexContentContainer>
 );
 
 export default ExperienceSection;

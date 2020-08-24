@@ -8,8 +8,8 @@ const SidebarList: FC<SidebarListContent> = ({ title, content }) => (
   <SidebarContainer>
     <SidebarTitle>{title}</SidebarTitle>
     <SidebarListContainer>
-      {content.map((text) => (
-        <SidebarListText>{text}</SidebarListText>
+      {content.map((text, index) => (
+        <SidebarListText key={index}>{text}</SidebarListText>
       ))}
     </SidebarListContainer>
   </SidebarContainer>

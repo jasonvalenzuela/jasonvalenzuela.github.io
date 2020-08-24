@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import MainContainer from "../common/MainContainer";
+import IndexContentContainer from "../common/IndexContentContainer";
 import styled from "styled-components";
 
 interface CareerProfileSectionProps {
@@ -9,11 +9,11 @@ interface CareerProfileSectionProps {
 const CareerProfileSection: FC<CareerProfileSectionProps> = ({
   paragraphs,
 }) => (
-  <MainContainer sectionType="career" title="Career Profile">
-    {paragraphs.map((text) => (
-      <SectionText>{text}</SectionText>
+  <IndexContentContainer sectionType="career" title="Career Profile">
+    {paragraphs.map((text, index) => (
+      <SectionText key={index}>{text}</SectionText>
     ))}
-  </MainContainer>
+  </IndexContentContainer>
 );
 
 export default CareerProfileSection;
