@@ -91,4 +91,8 @@ const MainWrapper = styled.div`
   & > :not(:last-child) {
     margin-bottom: 60px;
   }
+
+  @media (max-width: 767px) {
+    padding: 30px;
+  }
 `;

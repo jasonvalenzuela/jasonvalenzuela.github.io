@@ -78,12 +78,21 @@ const ExperiencePositionAndDatesRow = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const ExperienceHeaderText = styled.h3`
   color: #3f4650;
   font-size: 16px;
   margin: 0;
+
+  @media (max-width: 767px) {
+    margin-bottom: 5px;
+  }
 `;
 
 const ExperienceSubText = styled.div`

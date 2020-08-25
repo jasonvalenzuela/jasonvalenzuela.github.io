@@ -78,4 +78,9 @@ const SidebarRoot = styled.div`
   height: 100%;
   min-height: 800px;
   color: #fff;
+
+  @media (max-width: 767px) {
+    position: static;
+    width: inherit;
+  }
 `;
