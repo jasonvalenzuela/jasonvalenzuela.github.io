@@ -1,9 +1,21 @@
-# jasonvalenzuela.github.io
-Personal website and CV for Jason Valenzuela.
+# React-Static - TypeScript Template
 
-TODOs/Notes for the Future:
+To use this template, run `react-static create` and use the `typescript` template.
 
-- Create a different kind of section to showcase what kind of tech I'm experienced with
-- Move pages/components to Gatsby
-- Create a blog/journal section for the page.
-- Add a way to download resume on here as a PDF.
+## Path Aliases for Absolute Imports
+
+`react-static-typescript-plugin` supports path aliases [since v3.1](https://github.com/react-static/react-static/pull/963#issuecomment-455596728). It has been set up in this template.
+
+```js
+// tsconfig.json
+{
+  // ...
+    "paths": {
+      "@components/*": ["src/components/*"]
+    },
+  // ...
+}
+
+// this works in your React app
+import FancyDiv from '@components/FancyDiv'
+```
