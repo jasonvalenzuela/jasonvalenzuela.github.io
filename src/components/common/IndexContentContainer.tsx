@@ -77,8 +77,4 @@ const TitleBase = styled.h2`
 const ContainerBase = styled.div`
   display: flex;
   flex-direction: column;
-
-  & > :not(:last-child) {
-    margin-bottom: 10px;
-  }
 `;

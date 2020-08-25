@@ -38,3 +38,9 @@ export interface ExperienceContent {
   details: ExperienceDetails;
   description: string[];
 }
+
+export interface ProjectsContent {
+  link: string;
+  name: string;
+  description: string;
+}

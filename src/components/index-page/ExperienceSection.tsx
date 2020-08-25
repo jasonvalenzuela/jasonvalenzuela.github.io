@@ -47,18 +47,18 @@ const ExperienceSection: FC<{
 
 export default ExperienceSection;
 
-const ExperienceSectionBase = styled(IndexContentContainer)`
-  & > :not(:last-child) {
-    margin-bottom: 30px;
-  }
-`;
-
 const ExperienceContentBase = styled.div`
   display: flex;
   flex-direction: column;
 
   & > :not(:last-child) {
     margin-bottom: 10px;
+  }
+`;
+
+const ExperienceSectionBase = styled(IndexContentContainer)`
+  ${ExperienceContentBase}:not(:last-child) {
+    margin-bottom: 30px;
   }
 `;
 

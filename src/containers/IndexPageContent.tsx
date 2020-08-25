@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CareerProfileSection from "components/index-page/CareerProfileSection";
 import ExperienceSection from "components/index-page/ExperienceSection";
 import ProjectsSection from "components/index-page/ProjectsSection";
-import { ExperienceContent } from "types";
+import { ExperienceContent, ProjectsContent } from "types";
 
 const careerProfileContent = [
   "I am full stack software developer and a computer science graduate from the University of Virginia looking for software development roles in the Eugene-Springfield, OR area. I am also open to roles in Corvallis, Portland, or remote. I have a breadth of experience in software development, ranging from web and mobile development to machine learning and data analytics, and I enjoy expanding my knowledge of my craft and delivering pleasurable experiences to clients and stakeholders.",
@@ -52,11 +52,32 @@ const experienceContent: ExperienceContent[] = [
   },
 ];
 
+const projectsContent: ProjectsContent[] = [
+  {
+    link: "https://github.com/OpenEugene/openboard",
+    name: "Openboard",
+    description:
+      "Collaborating with contributors in the Eugene Tech community to create an open source bulletin board for publicizing announcements relevant to other members of the community. It is being built with Elm, Go, and gRPC and will include a REST API to allow for other clients to consume this data.",
+  },
+  {
+    link: "https://github.com/hackoregon/civic",
+    name: "Hack Oregon",
+    description:
+      "Working as a front-end engineer for this organization, which is a rapid prototyping lab taking a creative approach to data projects that bring insight to complex issues in the public interest. I am using React and Redux to help build out the component library that other Hack Oregon projects use.",
+  },
+  {
+    link: "https://github.com/toyotathon/service-learning-practicum",
+    name: "Service Learning Practicum",
+    description:
+      "Implemented a data management system for Georgia's Healing House, a non-profit organization in Charlottesville, VA, alongside five other senior students. The system utilized the Django framework and other Python libraries for statistical analysis and display.",
+  },
+];
+
 const IndexPageContent: FC = () => (
   <MainWrapper>
-    <CareerProfileSection paragraphs={careerProfileContent} />
+    <CareerProfileSection careerProfileContent={careerProfileContent} />
     <ExperienceSection experienceContent={experienceContent} />
-    <ProjectsSection />
+    <ProjectsSection projectsContent={projectsContent} />
   </MainWrapper>
 );
 
